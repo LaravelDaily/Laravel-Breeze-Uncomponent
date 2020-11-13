@@ -1,4 +1,6 @@
-<x-guest-layout>
+@extends('layouts.guest')
+
+@section('content')
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -36,4 +38,4 @@
             </form>
         </div>
     </x-auth-card>
-</x-guest-layout>
+@endsection
