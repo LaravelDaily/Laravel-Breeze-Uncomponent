@@ -1,11 +1,10 @@
 @extends('layouts.guest')
 
 @section('content')
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')"/>
 
-    <!-- Validation Errors -->
-    <x-auth-validation-errors class="mb-4" :errors="$errors"/>
+    @include('partials.auth-session-status')
+
+    @include('partials.auth-validation-errors')
 
     <form method="POST" action="{{ route('login') }}">
     @csrf

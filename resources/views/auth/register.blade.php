@@ -1,8 +1,8 @@
 @extends('layouts.guest')
 
 @section('content')
-    <!-- Validation Errors -->
-    <x-auth-validation-errors class="mb-4" :errors="$errors"/>
+
+    @include('partials.auth-validation-errors')
 
     <form method="POST" action="{{ route('register') }}">
     @csrf
